@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/tracker",
-      "destination": "/api/px.js"
+      "destination": "/api/px"
     }
   ]
 }
