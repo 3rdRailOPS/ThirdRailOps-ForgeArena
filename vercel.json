@@ -1,5 +1,8 @@
 {
   "rewrites": [
-    { "source": "/tracker", "destination": "/api/px" }
+    {
+      "source": "/tracker",
+      "destination": "/api/px.js"
+    }
   ]
 }
