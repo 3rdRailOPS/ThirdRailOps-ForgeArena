@@ -16,7 +16,14 @@ export default async function handler(req, res) {
     totalHits: hitCount
   };
 
-  console.log("[TRIPWIRE HIT]", logEntry);
+  await fetch("https://discordapp.com/api/webhooks/1393117963829248061/4Ll5FEzqM8bEEDhY9x0Vt_U-5dKXi6F0eEUjlmTV-rBTbfHkDY--wB-Od8yq8Sn7r7kl", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({
+    content: `🚨 TRIPWIRE HIT 🚨\nIP: ${ip}\nUser Agent: ${userAgent}\nReferrer: ${referrer}\nTime: ${logEntry.time}`
+  })
+});
+
 
   res.setHeader("Content-Type", "image/png");
   res.setHeader("Cache-Control", "no-store");
